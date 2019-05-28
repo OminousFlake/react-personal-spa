@@ -1,0 +1,12 @@
+.conversations {
+    margin: 10px;
+}
+
+.conversation a {
+    text-decoration: none;
+    color: black;
+}
+
+.conversation a.active {
+    color: #90150d;
+}

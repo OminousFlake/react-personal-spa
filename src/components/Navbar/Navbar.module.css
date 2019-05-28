@@ -1,0 +1,21 @@
+.nav {
+    grid-area: n;
+    min-height: 600px;
+    background-color: #ff9540;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.item {
+    margin: 10px 0 0 10px;
+}
+
+.item a {
+    text-decoration: none;
+    color: #052F6D;
+}
+
+.item a.active {
+    color: #FFCB73;
+}

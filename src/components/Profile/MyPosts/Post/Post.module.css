@@ -1,0 +1,11 @@
+.post {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-top: 1px solid #FFCB73;
+    border-bottom: 1px solid #FFCB73;
+}
+
+.post p {
+    margin: 0;
+    word-break: break-all;
+}
