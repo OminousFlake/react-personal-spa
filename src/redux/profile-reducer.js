@@ -1,6 +1,5 @@
 const addPost = 'ADD-POST';
 const updatePostText = 'UPDATE-POST-TEXT';
-const toggleTooltip = 'TOGGLE-TOOLTIP';
 
 let initialState = {
     posts: [
@@ -29,11 +28,6 @@ const profileReducer = (state = initialState, action) => {
             copiedState.posts.push(newPost);
             copiedState.newPostText = '';
             return copiedState;
-        }
-        case toggleTooltip: {
-            let newState = Object.assign({}, state);
-            newState.showTooltip = !newState.showTooltip;
-            return newState;
         }
         default:
             return state;
