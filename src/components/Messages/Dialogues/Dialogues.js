@@ -19,7 +19,7 @@ const Dialogues = (props) => {
     };
 
     return (
-        <div>
+        <div className={s.container}>
             <div className={s.dialogues}>
                 { dialoguesElements }
             </div>

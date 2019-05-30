@@ -1,0 +1,13 @@
+.image {
+    height: 200px;
+    width: 300px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.image img {
+    box-sizing: border-box;
+    margin: 0;
+    border-radius: 10px;
+    border: 2px solid #052F6D;
+}

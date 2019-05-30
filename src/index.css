@@ -1,6 +1,7 @@
 body {
   margin: 0;
   color: #052F6D;
+  font-size: 1.2em;
   box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -15,12 +16,16 @@ code {
 }
 
 button {
-  width: 50px;
   height: 30px;
-  background-color: #ff9540;
-  border: solid #052F6D;
+  font-size: 0.8em;
+  background-color: #FFCB73;
+  border: 2px solid #052F6D;
   outline: none;
   border-radius: 10px;
   cursor: pointer;
   color: #052F6D;
+}
+
+h1 {
+  font-size: 1.2em;
 }

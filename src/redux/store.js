@@ -1,6 +1,6 @@
 /*
 
-import profileReducer from "./profile-reducer";
+import galleryReducer from "./profile-reducer";
 import messagesReducer from "./messages-reducer";
 
 
@@ -40,7 +40,7 @@ let store = {
     },
 
     dispatch(action) {
-        this._state.profilePage = profileReducer(this._state.profilePage, action);
+        this._state.profilePage = galleryReducer(this._state.profilePage, action);
         this._state.messagesPage = messagesReducer(this._state.messagesPage, action);
         this._callSubscriber(this._state);
     }

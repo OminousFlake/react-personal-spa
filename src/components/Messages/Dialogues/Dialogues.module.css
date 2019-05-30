@@ -1,3 +1,9 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .dialogues {
     margin: 10px;
 }
@@ -6,7 +12,7 @@
     min-width: 300px;
     height: 50px;
     position: relative;
-    padding: 0 10px;
+    padding: 0 70px 10px 20px;
 }
 
 .messageSender textarea {
@@ -17,7 +23,7 @@
     resize: none;
     outline: none;
     border-radius: 10px;
-    padding: 5px 60px 5px 10px;
+    padding: 5px 10px;
     background-color: #FFCB73;
     border: 1px solid #052F6D;
     color: #052F6D;
