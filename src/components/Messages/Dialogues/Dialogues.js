@@ -3,7 +3,7 @@ import s from "./Dialogues.module.css";
 import Dialogue from "./DIalogue/Dialogue";
 
 const Dialogues = (props) => {
-    let dialoguesElements = props.dialogues.map(el => <Dialogue message={el.message} />);
+    let dialoguesElements = props.dialogues.map(el => <Dialogue message={el.message} key={el.id}/>);
 
     let onMessageBodyChange = (event) => {
         let body = event.target.value;
