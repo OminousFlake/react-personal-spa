@@ -7,6 +7,7 @@ import Messages from "./components/Messages/Messages";
 import {Route} from "react-router-dom";
 import RouteGenerator from "./components/RouteGenerator/RouteGenerator";
 import GalleryContainer from "./components/Gallery/GalleryContainer";
+import SudokuContainer from "./components/Sudoku/SudokuContainer.js";
 
 const App = () => {
     return (
@@ -24,6 +25,8 @@ const App = () => {
                     <RouteGenerator/>}/>
                 <Route path='/gallery' render={() =>
                     <GalleryContainer/>}/>
+                <Route path='/sudoku' render={() => 
+                    <SudokuContainer />}/>
             </div>
         </div>
     );
