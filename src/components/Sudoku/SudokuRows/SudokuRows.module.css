@@ -1,34 +1,86 @@
-.rows {
+.grid {
+	position: relative;
 	display: grid;
-	grid-template-rows: repeat(9, 40px);
-	grid-template-columns: repeat(1, 360px);
+	grid-template-rows: repeat(9, 1fr);
+	grid-template-columns: repeat(1, 1fr);
     border: 2px solid #052F6D;
     border-radius: 5px;
+    justify-items: center;
 }
 
-.cells {
+.grid:before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 124px;
+	border-right: 2px solid #052F6D;
+	border-left: 2px solid #052F6D;
+}
+
+.row {
+	height: 1fr;
 	display: grid;
-	grid-template-rows: repeat(1, 40px);
-	grid-template-columns: repeat(9, 40px);
+	grid-template-rows: repeat(1, 1fr);
+	grid-template-columns: repeat(9, 1fr);
 	justify-items: center;
 	align-items: center;
 }
 
-.cell:nth-child(3) {
-	margin-right: 2px;
+.row:nth-child(3),
+.row:nth-child(6) {
+	border-bottom: 2px solid #052F6D;
+}
+
+.row:nth-child(4),
+.row:nth-child(7) {
+	padding-top: 3px;
 }
 
 .cell {
-	width: 33px;
-	height: 33px;
+	width: 34px;
+	height: 34px;
 	border: 1px solid #052F6D;
 	border-radius: 5px;
 	background-color: #FFCB73;
 	color: #052F6D;
 	font-size: 20px;
 	text-align: center;
+	margin: 0 3px 3px 0;
+	padding: 0;
 }
 
-.given {
-	background-color: lightgreen;
+.cell:nth-child(1), 
+.cell:nth-child(4),
+.cell:nth-child(7) {
+	margin-left: 3px;
+}
+
+.guessedCorrectly {
+	background-color: rgb(144, 255, 200);
+}
+
+.guessedWrong {
+	background-color: rgb(255, 144, 144);
+	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  	transform: translate3d(0, 0, 0);
+  	backface-visibility: hidden;
+  	perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }

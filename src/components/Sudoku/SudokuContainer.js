@@ -13,8 +13,10 @@ const mapStateToProps = (state) => {
     return {
         grid: state.sudokuPage.grid,
         isLoading: state.sudokuPage.isLoading,
-        isSpinning: state.sudokuPage.isSpinning,
-        gameStarted: state.sudokuPage.gameStarted
+        gameStarted: state.sudokuPage.gameStarted,
+        gameChecked: state.sudokuPage.gameChecked,
+        numberOfMistakes: state.sudokuPage.numberOfMistakes,
+        gameFinished: state.sudokuPage.gameFinished
     }
 };
 

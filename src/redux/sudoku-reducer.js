@@ -6,8 +6,10 @@ const checkAnswers = 'CHECK_ANSWERS';
 let initialState = {
     grid: [],
     isLoading: true,
-    isSpinning: true,
-    gameStarted: false
+    gameStarted: false,
+    gameChecked: false,
+    numberOfMistakes: 0,
+    gameFinished: false
 };
 
 const sudokuReducer = (state = initialState, action) => {
@@ -157,7 +159,7 @@ const sudokuReducer = (state = initialState, action) => {
 
             let basicGrid = createBasicGrid();
             let randomGrid = randomiseGrid(basicGrid, sudokuFuncs, 100, 200);
-            let gappedGrid = makeGaps(randomGrid, 2);
+            let gappedGrid = makeGaps(randomGrid, 79);
             copiedState.grid = gappedGrid;
             copiedState.isLoading = false;
             copiedState.gameStarted = true;
@@ -169,6 +171,9 @@ const sudokuReducer = (state = initialState, action) => {
             copiedState.grid = [];
             copiedState.isLoading = true;
             copiedState.gameStarted = false;
+            copiedState.gameChecked = false;
+            copiedState.numberOfMistakes = 0;
+            copiedState.gameFinished = false;
             return copiedState;
         }
         case changeCell: {
@@ -201,6 +206,7 @@ const sudokuReducer = (state = initialState, action) => {
         }
         case checkAnswers: {
             let copiedState = {...state};
+            copiedState.numberOfMistakes = 0;
             copiedState.grid = [...state.grid];
             if (copiedState.grid.length > 0) {
                 for (let i = 0; i < copiedState.grid.length; i++) {
@@ -210,23 +216,22 @@ const sudokuReducer = (state = initialState, action) => {
                     }
                 }
             }
-            let mistakesCount = 0;
             for (let x = 0; x < copiedState.grid.length; x++) {
                 for (let y = 0; y < copiedState.grid[x].length; y++) {
                     if (copiedState.grid[x][y].userGuess || copiedState.grid[x][y].userGuess === '') {
                         if (copiedState.grid[x][y].userGuess != copiedState.grid[x][y].value) {
-                            mistakesCount++;
+                            copiedState.numberOfMistakes++;
+                            copiedState.grid[x][y].guessedCorrectly = false;
+                        } else {
+                            copiedState.grid[x][y].guessedCorrectly = true;
                         }
                     } 
                 }
             }
-            if (!mistakesCount) {
-                console.log('You have won! Congratulations!')
-            } else if  (mistakesCount === 1) {
-                console.log('You have 1 mistake!');
-            } else {
-                console.log('You have ' + mistakesCount + ' mistakes!');
+            if (!copiedState.numberOfMistakes) {
+                copiedState.gameFinished = true;
             }
+            copiedState.gameChecked = true;
             
             return copiedState;
         }

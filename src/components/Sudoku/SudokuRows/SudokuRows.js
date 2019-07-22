@@ -7,11 +7,12 @@ const SudokuRows = (props) => {
 		return <SudokuCells row={el} 
 							key={index} 
 							id={index}
-							changeCell={props.changeCell}/> 
+							changeCell={props.changeCell}
+							gameChecked={props.gameChecked}/> 
 	});
 
 	return (
-		<div className={s.rows}>
+		<div className={s.grid}>
 			{rows}
 		</div>
 	)
