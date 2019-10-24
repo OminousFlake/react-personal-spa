@@ -159,7 +159,7 @@ const sudokuReducer = (state = initialState, action) => {
 
             let basicGrid = createBasicGrid();
             let randomGrid = randomiseGrid(basicGrid, sudokuFuncs, 100, 200);
-            let gappedGrid = makeGaps(randomGrid, 79);
+            let gappedGrid = makeGaps(randomGrid, 2);
             copiedState.grid = gappedGrid;
             copiedState.isLoading = false;
             copiedState.gameStarted = true;

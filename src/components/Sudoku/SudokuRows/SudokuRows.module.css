@@ -12,9 +12,16 @@
 	content: '';
 	position: absolute;
 	height: 100%;
-	width: 124px;
-	border-right: 2px solid #052F6D;
 	border-left: 2px solid #052F6D;
+	left: 33%;
+}
+
+.grid:after {
+	content: '';
+	position: absolute;
+	height: 100%;
+	border-right: 2px solid #052F6D;
+	left: 66.3%;
 }
 
 .row {
