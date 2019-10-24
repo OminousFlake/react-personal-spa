@@ -1,8 +1,8 @@
-const resetSudoku = 'RESET_SUDOKU';
-const createGrid = 'CREATE-GRID';
-const changeCell = 'CHANGE_CELL';
-const toggleStartButton = 'TOGGLE_START_BUTTON';
-const checkAnswers = 'CHECK_ANSWERS';
+const RESET_SUDOKU = 'RESET_SUDOKU';
+const CREATE_GRID = 'CREATE_GRID';
+const CHANGE_CELL = 'CHANGE_CELL';
+const TOGGLE_START_BUTTON = 'TOGGLE_START_BUTTON';
+const CHECK_ANSWERS = 'CHECK_ANSWERS';
 let initialState = {
     grid: [],
     isLoading: true,
@@ -14,7 +14,7 @@ let initialState = {
 
 const sudokuReducer = (state = initialState, action) => {
     switch (action.type) {
-        case createGrid: {
+        case CREATE_GRID: {
             let copiedState = {...state};
 
             function createBasicGrid() {
@@ -166,7 +166,7 @@ const sudokuReducer = (state = initialState, action) => {
                 
             return copiedState;
         }
-        case resetSudoku: {
+        case RESET_SUDOKU: {
             let copiedState = {...state};
             copiedState.grid = [];
             copiedState.isLoading = true;
@@ -176,7 +176,7 @@ const sudokuReducer = (state = initialState, action) => {
             copiedState.gameFinished = false;
             return copiedState;
         }
-        case changeCell: {
+        case CHANGE_CELL: {
             let copiedState = {...state};
             copiedState.grid = [...state.grid];
             if (copiedState.grid.length > 0) {
@@ -199,12 +199,12 @@ const sudokuReducer = (state = initialState, action) => {
             }
             return copiedState;
         }
-        case toggleStartButton: {
+        case TOGGLE_START_BUTTON: {
             let copiedState = {...state};
             copiedState.gameStarted = action.boolean;
             return copiedState;
         }
-        case checkAnswers: {
+        case CHECK_ANSWERS: {
             let copiedState = {...state};
             copiedState.numberOfMistakes = 0;
             copiedState.grid = [...state.grid];
@@ -240,11 +240,11 @@ const sudokuReducer = (state = initialState, action) => {
     }
 };
 
-export const createGridAC = () => ({type: createGrid});
-export const resetSudokuAC = () => ({type: resetSudoku});
-export const changeCellAC = (number, location) => ({
-    type: changeCell, userInput: number, cellLocation: location});
-export const toggleStartButtonAC = () => ({type: toggleStartButton});
-export const checkAnswersAC = () => ({type: checkAnswers});
+export const createGrid = () => ({type: CREATE_GRID});
+export const resetSudoku = () => ({type: RESET_SUDOKU});
+export const changeCell = (number, location) => ({
+    type: CHANGE_CELL, userInput: number, cellLocation: location});
+export const toggleStartButton = () => ({type: TOGGLE_START_BUTTON});
+export const checkAnswers = () => ({type: CHECK_ANSWERS});
 
 export default sudokuReducer;
