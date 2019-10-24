@@ -81,7 +81,9 @@ class RouteGenerator extends React.Component {
                 </div>
                 <div className={s.container}>
                     <p>Удачи в новом маршруте!</p>
-                    <YMaps query={{ load: "package.full" }}>
+                    <YMaps query={{
+                            load: "package.full", 
+                            apikey: "6dcad05d-5db3-4d4c-a137-ce3f7b46a1bb" }}>
                         <Map
                             state={mapState}
                             onLoad={this.onYmapsLoad}

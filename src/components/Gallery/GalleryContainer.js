@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Gallery from "./Gallery";
 import {connect} from "react-redux";
 
