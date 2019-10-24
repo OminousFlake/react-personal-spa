@@ -24,7 +24,7 @@ button {
   border-radius: 10px;
   cursor: pointer;
   color: #052F6D;
-  transition: all .3s ease-out;
+  transition: all .2s ease-out;
 }
 
 button:active {

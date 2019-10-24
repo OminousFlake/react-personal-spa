@@ -50,7 +50,6 @@ class RouteGenerator extends React.Component {
             () => {
                 const address = this.state.address;
                 if (address.length > 1) {
-                    console.log(this.ymaps);
                     this.ymaps
                         .route(address, {
                             mapStateAutoApply: true,
