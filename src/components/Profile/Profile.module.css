@@ -15,7 +15,7 @@
 }
 
 .userInfo {
-    width: 300px;
+    min-width: 300px;
 }
 
 .userInfo h1 {
