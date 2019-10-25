@@ -2,8 +2,8 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ominousflake.github.io/react-personal-spa",
   "dependencies": {
-    "homepage": "http://ominousflake.github.io/ReactPersonalSPA",
     "audit": "0.0.6",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
