@@ -39,7 +39,7 @@ const Events = (props) => {
 			/>
 			<button type="button" 
 					onClick={() => 
-						setUrl(`http://hn.algolia.com/api/v1/search?query=${query}`)
+						setUrl(`https://hn.algolia.com/api/v1/search?query=${query}`)
 					}
 			>
 				Поиск
