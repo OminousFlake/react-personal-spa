@@ -1,0 +1,26 @@
+.articles {
+	margin-left: 20px;
+}
+
+.articles a {
+	color: #052F6D;
+}
+
+.articles a:visited {
+	color: white;
+}
+
+.articles input {
+	max-width: 300px;
+    height: 30px;
+    margin: 0 10px 20px 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    resize: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color: #FFCB73;
+    color: #052F6D;
+    border: 1px solid #052F6D;
+}

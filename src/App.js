@@ -8,6 +8,7 @@ import {Route} from "react-router-dom";
 import RouteGenerator from "./components/RouteGenerator/RouteGenerator";
 import GalleryContainer from "./components/Gallery/GalleryContainer";
 import SudokuContainer from "./components/Sudoku/SudokuContainer.js";
+import Articles from'./components/Articles/Articles.js';
 
 const App = () => {
     return (
@@ -19,14 +20,16 @@ const App = () => {
                     <Profile/>}/>
                 <Route path='/profile' render={() =>
                     <Profile/>}/>
-                <Route path='/messages' render={() =>
-                    <Messages/>}/>
+                {/*<Route path='/messages' render={() =>
+                    <Messages/>}/>*/}
                 <Route path='/route-generator' render={() =>
                     <RouteGenerator/>}/>
                 <Route path='/gallery' render={() =>
                     <GalleryContainer/>}/>
                 <Route path='/sudoku' render={() => 
                     <SudokuContainer />}/>
+                <Route path='/articles' render={() => 
+                    <Articles />}/>
             </div>
         </div>
     );
