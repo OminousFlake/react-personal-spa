@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import Navbar from "./components/Navbar/Navbar";
 import Profile from "./components/Profile/Profile";
 import Header from "./components/Header/Header";
 import Messages from "./components/Messages/Messages";
+import Menu from "./components/Menu/Menu.js";
 import {Route} from "react-router-dom";
 import RouteGenerator from "./components/RouteGenerator/RouteGenerator";
 import GalleryContainer from "./components/Gallery/GalleryContainer";
@@ -14,7 +14,6 @@ const App = () => {
     return (
         <div className='app-wrapper'>
             <Header/>
-            <Navbar/>
             <div className='app-wrapper__content'>
                 <Route exact path='/' render={() =>
                     <Profile/>}/>

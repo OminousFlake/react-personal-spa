@@ -3,17 +3,11 @@
   max-width: 1000px;
   margin: auto;
   padding: 10px;
-  display: grid;
-  grid-template-areas:
-  'h h'
-  'n c';
-  grid-template-rows: 60px 1fr;
-  grid-template-columns: 120px 1fr;
-  grid-gap: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .app-wrapper__content {
-  grid-area: c;
   min-height: 800px;
   max-height: 800px;
   overflow-y: auto;

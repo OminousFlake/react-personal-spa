@@ -1,16 +1,16 @@
-/*import React from 'react';
-import s from './Navbar.module.css';
+import React from 'react';
+import s from './Menu.module.css';
 import {NavLink} from "react-router-dom";
 
-const Navbar = () => {
+const Menu = () => {
     return (
         <nav className={s.nav}>
             <div className={s.item}>
                 <NavLink to='/profile' activeClassName={s.active}>Профиль</NavLink>
             </div>
-            <div className={s.item}>
+            {/*<div className={s.item}>
                 <NavLink to='/messages' activeClassName={s.active}>Контакты</NavLink>
-            </div>
+            </div>*/}
             <div className={s.item}>
                 <NavLink to='/route-generator' activeClassName={s.active}>Карта</NavLink>
             </div>
@@ -27,4 +27,4 @@ const Navbar = () => {
     )
 };
 
-export default Navbar;*/
+export default Menu;
