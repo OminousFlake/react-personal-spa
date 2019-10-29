@@ -1,8 +1,9 @@
+
 .user {
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
-    border: 1px solid #FFCB73;
+    border-bottom: 1px solid #FFCB73;
 }
 
 .imageBlock img {
