@@ -1,17 +1,22 @@
 .app-wrapper {
   min-width: 360px;
   max-width: 1000px;
+  position: relative;
   margin: auto;
-  padding: 10px;
   display: flex;
   flex-direction: column;
 }
 
 .app-wrapper__content {
-  min-height: 800px;
-  max-height: 800px;
-  overflow-y: auto;
+	min-height: 100vh;
+	margin-top: 70px;
   background-color: #ff9540;
   border-radius: 10px;
 }
 
+@media screen and (max-width: 600px) {
+  .app-wrapper__content {
+    margin-top: 5px;
+  }
+
+}

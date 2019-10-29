@@ -63,13 +63,13 @@
     }
 
   .nav:before {
-    left: 9px;
-    top: 39px;
-    border-radius: 0 0 10px 0;
+        left: 9px;
+        top: 39px;
+        border-radius: 0 0 10px 0;
     }
 
     .logo {
-    position: absolute;
-    margin-left: 2px;
+        position: absolute;
+        margin-left: 2px;
     }
 }

@@ -2,8 +2,6 @@ import React from 'react';
 import './App.css';
 import Profile from "./components/Profile/Profile";
 import Header from "./components/Header/Header";
-import Messages from "./components/Messages/Messages";
-import Menu from "./components/Menu/Menu.js";
 import {Route} from "react-router-dom";
 import RouteGenerator from "./components/RouteGenerator/RouteGenerator";
 import GalleryContainer from "./components/Gallery/GalleryContainer";
@@ -19,8 +17,6 @@ const App = () => {
                     <Profile/>}/>
                 <Route path='/profile' render={() =>
                     <Profile/>}/>
-                {/*<Route path='/messages' render={() =>
-                    <Messages/>}/>*/}
                 <Route path='/route-generator' render={() =>
                     <RouteGenerator/>}/>
                 <Route path='/gallery' render={() =>

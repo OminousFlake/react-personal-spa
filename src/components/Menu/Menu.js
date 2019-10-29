@@ -8,9 +8,6 @@ const Menu = () => {
             <div className={s.item}>
                 <NavLink to='/profile' activeClassName={s.active}>Профиль</NavLink>
             </div>
-            {/*<div className={s.item}>
-                <NavLink to='/messages' activeClassName={s.active}>Контакты</NavLink>
-            </div>*/}
             <div className={s.item}>
                 <NavLink to='/route-generator' activeClassName={s.active}>Карта</NavLink>
             </div>

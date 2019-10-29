@@ -51,10 +51,9 @@ const Events = (props) => {
 				: <>{data.hits.some(item => item.url) 
 					? <ul>
 						 {data.hits.map((item, index) => {
-
 							if (item.url) {
 								return <li key={uniqueId++}>
-									<a href={item.url} rel="nofollow noopener" target="_blank">{item.title}</a>
+									<a href={item.url} rel="noreferrer noopener" target="_blank">{item.title}</a>
 								</li>
 							}
 						})} 
